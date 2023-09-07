@@ -12,3 +12,4 @@ Proporcionar una interfaz de usuario intuitiva y fácil de usar para que los res
 En dicho proyecto introductorio, se encuentra el diagrama de flujo general, el pseudocódigo que simula el sistema de reservas. Se establece el proceso de gestión del proyecto con las metodologías ágiles trabajadas durante el curso: KANBAN Y SCRUM.
 
 La documentación correspondiente se encuentra en el siguiente repositorio GitHub:
+https://github.com/Mayraflo/TPFinalFullcoders.git 

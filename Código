@@ -1,0 +1,71 @@
+Algoritmo SistemaReservasCabanas
+	
+Definir cabaña: arreglo [1..10] de booleano // 10 cabañas disponibles
+Definir nombreHuesped: arreglo [1..10] de cadena // Nombre del huésped en cada cabaña
+Definir fechaReserva: arreglo [1..10] de cadena // Fecha de reserva en cada cabaña
+	
+	Procedimiento MostrarDisponibilidad()
+    Escribir "Estado de las cabañas:"
+    Para i = 1 Hasta 10 Hacer
+        Si cabaña[i] = falso Entonces
+            Escribir "Cabaña ", i, " Disponible"
+        Sino
+            Escribir "Cabaña ", i, " Ocupada por: ", nombreHuesped[i], " Fecha de reserva: ", fechaReserva[i]
+        FinSi
+    FinPara
+	FinProcedimiento
+	
+	Procedimiento ReservarCabaña()
+    MostrarDisponibilidad()
+    Escribir "Ingrese el número de cabaña que desea reservar:"
+    Leer numCabaña
+    Si numCabaña < 1 O numCabaña > 10 Entonces
+        Escribir "Número de cabaña inválido. Intente nuevamente."
+    Sino Si cabaña[numCabaña] = verdadero Entonces
+			Escribir "Lo siento, la cabaña ", numCabaña, " ya está reservada."
+		Sino
+			Escribir "Ingrese el nombre del huésped:"
+			Leer nombreHuesped[numCabaña]
+			Escribir "Ingrese la fecha de reserva:"
+			Leer fechaReserva[numCabaña]
+			cabaña[numCabaña] = verdadero
+			Escribir "Reserva exitosa."
+		FinSi
+		FinProcedimiento
+		
+		Procedimiento CancelarReserva()
+		MostrarDisponibilidad()
+		Escribir "Ingrese el número de cabaña que desea cancelar:"
+		Leer numCabaña
+		Si numCabaña < 1 O numCabaña > 10 Entonces
+			Escribir "Número de cabaña inválido. Intente nuevamente."
+		Sino Si cabaña[numCabaña] = falso Entonces
+				Escribir "La cabaña ", numCabaña, " no está reservada."
+			Sino
+				cabaña[numCabaña] = falso
+				nombreHuesped[numCabaña] = ""
+				fechaReserva[numCabaña] = ""
+				Escribir "Reserva cancelada."
+			FinSi
+			FinProcedimiento
+			
+			// Programa principal
+			Repetir
+				Escribir "Menú de opciones:"
+				Escribir "1. Mostrar disponibilidad de cabañas"
+				Escribir "2. Reservar cabaña"
+				Escribir "3. Cancelar reserva"
+				Escribir "4. Salir"
+				Escribir "Seleccione una opción:"
+				Leer opcion
+				
+				Segun opcion Hacer
+					1: MostrarDisponibilidad()
+					2: ReservarCabaña()
+					3: CancelarReserva()
+					4: Escribir "Saliendo del sistema de reservas. ¡Hasta luego!"
+						opcion := 4 // Salir del bucle
+					Otro: Escribir "Opción no válida. Intente nuevamente."
+    FinSegun
+Hasta Que opcion = 4
+

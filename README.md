@@ -9,7 +9,7 @@ Mostrar el calendario de disponibilidad de días.
 •	Interfaz de Usuario Amigable:
 Proporcionar una interfaz de usuario intuitiva y fácil de usar para que los respectivos huéspedes puedan navegar y utilizar todas las funciones del sistema.
 
-En dicho proyecto introductorio, se encuentra el diagrama de flujo general, el pseudocódigo que simula el sistema de reservas. Se establece el proceso de gestión del proyecto con las metodologías ágiles trabajadas durante el curso: KANBAN Y SCRUM.
+En dicho proyecto introductorio, se encuentra el diagrama de flujo general, el pseudocódigo que simula el sistema de reservas. Se establece el proceso de gestión del proyecto con las metodologías ágiles trabajadas durante el curso: SCRUM.
 
 La documentación correspondiente se encuentra en el siguiente repositorio GitHub:
 https://github.com/Mayraflo/TPFinalFullcoders.git 
